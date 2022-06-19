@@ -1,0 +1,14 @@
+{%block content%}
+<form method="post">
+  {% csrf_token %}
+  <label>Category:</label>
+  <select name="category">
+    <option value="doctor">doctor</option>
+    <option value="patient">patient</option>
+  </select>
+  {{login_form}}
+  <input type="submit">
+
+</form>
+<p class="text-center">Don't have an account? <a href="/signup">Create an account</a>.</p>
+{%endblock%}
